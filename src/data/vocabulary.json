@@ -1,0 +1,104 @@
+{
+  "A1": [
+    {
+      "id": "p_a1_001",
+      "text": "Hello. My name is John. I am a student. I like cats and dogs. They are my friends.",
+      "title": "My Pets",
+      "wordCount": 18
+    },
+    {
+      "id": "p_a1_002",
+      "text": "I live in a house. My house is big. It has a garden. I play in the garden every day.",
+      "title": "My House",
+      "wordCount": 21
+    },
+    {
+      "id": "p_a1_003",
+      "text": "Water is good. I drink water every day. Water is clean and fresh. I like water very much.",
+      "title": "Water",
+      "wordCount": 19
+    },
+    {
+      "id": "p_a1_004",
+      "text": "The sun is bright. The sky is blue. Birds fly in the sky. I see trees and flowers. Nature is beautiful.",
+      "title": "Beautiful Day",
+      "wordCount": 23
+    },
+    {
+      "id": "p_a1_005",
+      "text": "I eat bread for breakfast. I like eggs and milk too. Food gives me energy. I am happy when I eat good food.",
+      "title": "Breakfast Time",
+      "wordCount": 24
+    }
+  ],
+  "A2": [
+    {
+      "id": "p_a2_001",
+      "text": "My friend lives near my house. We play together in the garden. In summer, we swim in the pool. In winter, we make snowmen. We are best friends forever.",
+      "title": "My Best Friend",
+      "wordCount": 32
+    },
+    {
+      "id": "p_a2_002",
+      "text": "I love summer because it is warm and sunny. I can go to the beach and swim in the sea. Sometimes I eat ice cream with my family. Summer is my favorite season of the year.",
+      "title": "Summer Time",
+      "wordCount": 40
+    },
+    {
+      "id": "p_a2_003",
+      "text": "Yesterday I went to the park with my family. We had a picnic under a big tree. My mother made sandwiches and my father brought juice. We played games and had so much fun together.",
+      "title": "Family Picnic",
+      "wordCount": 38
+    },
+    {
+      "id": "p_a2_004",
+      "text": "I have a new bicycle. It is red and very fast. I ride it to school every morning. My friends think my bicycle is cool. I take good care of it and keep it clean.",
+      "title": "My Bicycle",
+      "wordCount": 37
+    }
+  ],
+  "B1": [
+    {
+      "id": "p_b1_001",
+      "text": "Living a healthy lifestyle is important for everyone. Regular exercise and a balanced diet can help you achieve your fitness goals. Ancient civilizations understood the benefits of staying active. Modern science confirms what they already knew.",
+      "title": "Healthy Living",
+      "wordCount": 40
+    },
+    {
+      "id": "p_b1_002",
+      "text": "To achieve success in life, you must work hard and stay focused. The benefits of dedication are obvious when you reach your goals. Ancient wisdom teaches us that persistence is the key to achievement.",
+      "title": "Path to Success",
+      "wordCount": 40
+    }
+  ],
+  "B2": [
+    {
+      "id": "p_b2_001",
+      "text": "Technology continues to enhance our daily lives in countless ways. It is obvious that smartphones have become critical tools for communication. The impact of these innovations is evident in every aspect of modern society, from education to healthcare.",
+      "title": "Technology Impact",
+      "wordCount": 42
+    },
+    {
+      "id": "p_b2_002",
+      "text": "Environmental conservation has become a critical issue in the modern world. Scientists work to enhance our understanding of climate change. The evidence is obvious, and immediate action is essential to protect our planet for future generations.",
+      "title": "Environment",
+      "wordCount": 40
+    }
+  ],
+  "C1": [
+    {
+      "id": "p_c1_001",
+      "text": "A pragmatic approach to problem-solving requires careful analysis and strategic thinking. Leaders must develop elaborate plans that account for multiple scenarios. This methodology has proven effective in addressing complex organizational challenges across various industries and sectors.",
+      "title": "Strategic Planning",
+      "wordCount": 38
+    }
+  ],
+  "C2": [
+    {
+      "id": "p_c2_001",
+      "text": "The ubiquitous presence of technology in contemporary society has fundamentally transformed human interaction. Despite their ephemeral nature, digital communications have become the primary medium for maintaining relationships. This paradigm shift represents an unprecedented evolution in social dynamics.",
+      "title": "Digital Age",
+      "wordCount": 38
+    }
+  ]
+}

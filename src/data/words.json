@@ -1,0 +1,374 @@
+{
+  "A1": [
+    {
+      "id": "w_a1_001",
+      "word": "cat",
+      "definition": "A small furry domestic animal with four legs and a tail",
+      "hint": "Meows and purrs"
+    },
+    {
+      "id": "w_a1_002",
+      "word": "dog",
+      "definition": "A loyal domestic animal that barks",
+      "hint": "Man's best friend"
+    },
+    {
+      "id": "w_a1_003",
+      "word": "house",
+      "definition": "A building where people live",
+      "hint": "A place to live"
+    },
+    {
+      "id": "w_a1_004",
+      "word": "sun",
+      "definition": "The bright star that gives us light and heat",
+      "hint": "Shines in the sky during day"
+    },
+    {
+      "id": "w_a1_005",
+      "word": "tree",
+      "definition": "A tall plant with branches and leaves",
+      "hint": "Has roots and grows in soil"
+    },
+    {
+      "id": "w_a1_006",
+      "word": "water",
+      "definition": "A clear liquid that we drink",
+      "hint": "Essential for life, falls as rain"
+    },
+    {
+      "id": "w_a1_007",
+      "word": "book",
+      "definition": "Pages with written words to read",
+      "hint": "You read this in school"
+    },
+    {
+      "id": "w_a1_008",
+      "word": "food",
+      "definition": "What we eat to stay healthy",
+      "hint": "Provides energy for our body"
+    },
+    {
+      "id": "w_a1_009",
+      "word": "play",
+      "definition": "To engage in activity for enjoyment",
+      "hint": "Have fun doing something"
+    },
+    {
+      "id": "w_a1_010",
+      "word": "love",
+      "definition": "A strong feeling of affection",
+      "hint": "The opposite of hate"
+    }
+  ],
+  "A2": [
+    {
+      "id": "w_a2_001",
+      "word": "garden",
+      "definition": "An area of ground for growing flowers and vegetables",
+      "hint": "A place with plants"
+    },
+    {
+      "id": "w_a2_002",
+      "word": "beach",
+      "definition": "Land beside the sea with sand",
+      "hint": "Where people go swimming"
+    },
+    {
+      "id": "w_a2_003",
+      "word": "school",
+      "definition": "A place where students learn",
+      "hint": "Teachers work here"
+    },
+    {
+      "id": "w_a2_004",
+      "word": "friend",
+      "definition": "A person you like and trust",
+      "hint": "Someone who cares about you"
+    },
+    {
+      "id": "w_a2_005",
+      "word": "summer",
+      "definition": "The warmest season of the year",
+      "hint": "School holiday season"
+    },
+    {
+      "id": "w_a2_006",
+      "word": "winter",
+      "definition": "The coldest season with snow",
+      "hint": "Time for skiing and snowmen"
+    },
+    {
+      "id": "w_a2_007",
+      "word": "music",
+      "definition": "Organized sounds that are pleasant to hear",
+      "hint": "Can be played with instruments"
+    },
+    {
+      "id": "w_a2_008",
+      "word": "family",
+      "definition": "Parents and children living together",
+      "hint": "Your relatives at home"
+    },
+    {
+      "id": "w_a2_009",
+      "word": "bicycle",
+      "definition": "A vehicle with two wheels",
+      "hint": "You pedal to move it"
+    },
+    {
+      "id": "w_a2_010",
+      "word": "flower",
+      "definition": "A colorful plant that smells nice",
+      "hint": "Blooms in spring"
+    }
+  ],
+  "B1": [
+    {
+      "id": "w_b1_001",
+      "word": "healthy",
+      "definition": "Free from illness and disease",
+      "hint": "In good physical condition"
+    },
+    {
+      "id": "w_b1_002",
+      "word": "exercise",
+      "definition": "Physical activity to stay fit",
+      "hint": "Sports or jogging"
+    },
+    {
+      "id": "w_b1_003",
+      "word": "success",
+      "definition": "Achievement of desired goals",
+      "hint": "Accomplishing your objectives"
+    },
+    {
+      "id": "w_b1_004",
+      "word": "persistence",
+      "definition": "Continuing despite difficulties",
+      "hint": "Never giving up"
+    },
+    {
+      "id": "w_b1_005",
+      "word": "knowledge",
+      "definition": "Information and understanding",
+      "hint": "What you learn and understand"
+    },
+    {
+      "id": "w_b1_006",
+      "word": "important",
+      "definition": "Having great significance",
+      "hint": "Really matters"
+    },
+    {
+      "id": "w_b1_007",
+      "word": "improve",
+      "definition": "To make something better",
+      "hint": "To enhance or develop"
+    },
+    {
+      "id": "w_b1_008",
+      "word": "challenge",
+      "definition": "A difficult task to overcome",
+      "hint": "Something hard to do"
+    },
+    {
+      "id": "w_b1_009",
+      "word": "develop",
+      "definition": "To grow or improve gradually",
+      "hint": "To advance or expand"
+    },
+    {
+      "id": "w_b1_010",
+      "word": "business",
+      "definition": "A company or commercial activity",
+      "hint": "Enterprise or trade"
+    }
+  ],
+  "B2": [
+    {
+      "id": "w_b2_001",
+      "word": "technology",
+      "definition": "Advanced tools and methods",
+      "hint": "Computers and innovation"
+    },
+    {
+      "id": "w_b2_002",
+      "word": "environment",
+      "definition": "The surroundings and natural world",
+      "hint": "Nature and climate"
+    },
+    {
+      "id": "w_b2_003",
+      "word": "evidence",
+      "definition": "Facts that prove something",
+      "hint": "Proof or demonstration"
+    },
+    {
+      "id": "w_b2_004",
+      "word": "perspective",
+      "definition": "A particular viewpoint or angle",
+      "hint": "A way of looking at something"
+    },
+    {
+      "id": "w_b2_005",
+      "word": "analysis",
+      "definition": "Detailed examination of something",
+      "hint": "Breaking down to understand"
+    },
+    {
+      "id": "w_b2_006",
+      "word": "innovation",
+      "definition": "New invention or improvement",
+      "hint": "Something created for the first time"
+    },
+    {
+      "id": "w_b2_007",
+      "word": "substantial",
+      "definition": "Large in amount or importance",
+      "hint": "Significant and considerable"
+    },
+    {
+      "id": "w_b2_008",
+      "word": "sustainable",
+      "definition": "Able to be maintained long-term",
+      "hint": "Environmentally responsible"
+    },
+    {
+      "id": "w_b2_009",
+      "word": "influence",
+      "definition": "Power to affect others or things",
+      "hint": "To shape or impact"
+    },
+    {
+      "id": "w_b2_010",
+      "word": "critical",
+      "definition": "Of great importance or at a crucial point",
+      "hint": "Essential or vital"
+    }
+  ],
+  "C1": [
+    {
+      "id": "w_c1_001",
+      "word": "pragmatic",
+      "definition": "Dealing with things in a practical, realistic way",
+      "hint": "Based on actual circumstances"
+    },
+    {
+      "id": "w_c1_002",
+      "word": "elaborate",
+      "definition": "Detailed and carefully planned",
+      "hint": "Complex and well-developed"
+    },
+    {
+      "id": "w_c1_003",
+      "word": "methodology",
+      "definition": "A system of principles and practices",
+      "hint": "The way something is done"
+    },
+    {
+      "id": "w_c1_004",
+      "word": "strategic",
+      "definition": "Planned to achieve a goal",
+      "hint": "Related to careful planning"
+    },
+    {
+      "id": "w_c1_005",
+      "word": "sophisticated",
+      "definition": "Complex and refined",
+      "hint": "Highly developed or advanced"
+    },
+    {
+      "id": "w_c1_006",
+      "word": "ambiguous",
+      "definition": "Open to more than one interpretation",
+      "hint": "Not clear or certain"
+    },
+    {
+      "id": "w_c1_007",
+      "word": "facilitate",
+      "definition": "To make easier or help progress",
+      "hint": "To enable or assist"
+    },
+    {
+      "id": "w_c1_008",
+      "word": "comprehensive",
+      "definition": "Including all aspects or details",
+      "hint": "Complete and thorough"
+    },
+    {
+      "id": "w_c1_009",
+      "word": "articulate",
+      "definition": "To express clearly and distinctly",
+      "hint": "To speak or explain well"
+    },
+    {
+      "id": "w_c1_010",
+      "word": "constitute",
+      "definition": "To be a part or element of",
+      "hint": "To make up or form"
+    }
+  ],
+  "C2": [
+    {
+      "id": "w_c2_001",
+      "word": "ubiquitous",
+      "definition": "Present everywhere at the same time",
+      "hint": "Widespread and omnipresent"
+    },
+    {
+      "id": "w_c2_002",
+      "word": "ephemeral",
+      "definition": "Lasting for a very short time",
+      "hint": "Temporary and fleeting"
+    },
+    {
+      "id": "w_c2_003",
+      "word": "paradigm",
+      "definition": "A typical example or pattern",
+      "hint": "A model or framework"
+    },
+    {
+      "id": "w_c2_004",
+      "word": "phenomenon",
+      "definition": "A remarkable or striking occurrence",
+      "hint": "An event or fact in nature"
+    },
+    {
+      "id": "w_c2_005",
+      "word": "contemplate",
+      "definition": "To think deeply or carefully",
+      "hint": "To ponder or reflect"
+    },
+    {
+      "id": "w_c2_006",
+      "word": "ambivalent",
+      "definition": "Having mixed or contradictory feelings",
+      "hint": "Uncertain in attitude"
+    },
+    {
+      "id": "w_c2_007",
+      "word": "meticulous",
+      "definition": "Very careful and precise",
+      "hint": "Paying careful attention to detail"
+    },
+    {
+      "id": "w_c2_008",
+      "word": "superficial",
+      "definition": "Existing on the surface only",
+      "hint": "Not deep or profound"
+    },
+    {
+      "id": "w_c2_009",
+      "word": "ambiguity",
+      "definition": "The quality of being unclear",
+      "hint": "Uncertainty or vagueness"
+    },
+    {
+      "id": "w_c2_010",
+      "word": "integrity",
+      "definition": "The quality of being honest and moral",
+      "hint": "Moral principles and values"
+    }
+  ]
+}
