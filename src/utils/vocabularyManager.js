@@ -1,5 +1,4 @@
 import vocabularyData from '../data/vocabulary.json';
-import wordsData from '../data/words.json';
 import paragraphsData from '../data/paragraphs.json';
 
 // Storage key for localStorage
@@ -16,7 +15,7 @@ const getDefaultProgress = () => ({
     C2: []
   },
   gameStats: {
-    typingSpeed: { highScore: 0, gamesPlayed: 0, totalWPM: 0 },
+    typingSpeed: { highScore: 0, gamesPlayed: 0, totalWPM: 0, averageWPM: 0 },
     wordGuess: { correctAnswers: 0, totalGuesses: 0, gamesPlayed: 0 },
     wordSearch: { gamesWon: 0, totalTime: 0 },
     wordPuzzle: { solved: 0, attempts: 0 },
@@ -29,6 +28,8 @@ const getDefaultProgress = () => ({
 
 // Vocabulary Manager Object
 export const VocabularyManager = {
+  
+  // ==================== PROGRESS MANAGEMENT ====================
   
   // Get current progress from localStorage
   getProgress() {
@@ -77,9 +78,13 @@ export const VocabularyManager = {
     return progress.discoveredWords[level] || [];
   },
   
+  // ==================== VOCABULARY OPERATIONS ====================
+  // Note: Vocabulary words are used in: Word Guess, Word Search, 
+  // Word Puzzle, Spelling Bee, Anagram games
+  
   // Get all words for a specific level
   getWordsByLevel(level) {
-    return wordsData[level] || [];
+    return vocabularyData[level] || [];
   },
   
   // Get a random word from a level
@@ -107,12 +112,16 @@ export const VocabularyManager = {
   
   // Get word by ID
   getWordById(wordId) {
-    for (const level in wordsData) {
-      const word = wordsData[level].find(w => w.id === wordId);
+    for (const level in vocabularyData) {
+      const word = vocabularyData[level].find(w => w.id === wordId);
       if (word) return { ...word, level };
     }
     return null;
   },
+  
+  // ==================== PARAGRAPH OPERATIONS ====================
+  // Note: Paragraphs are ONLY used in Typing Speed game
+  // Paragraphs are separate from vocabulary and follow CEFR levels
   
   // Get all paragraphs for a level
   getParagraphsByLevel(level) {
@@ -127,6 +136,8 @@ export const VocabularyManager = {
     const randomIndex = Math.floor(Math.random() * paragraphs.length);
     return paragraphs[randomIndex];
   },
+  
+  // ==================== STATISTICS MANAGEMENT ====================
   
   // Update game statistics
   updateGameStats(gameName, stats) {
@@ -162,8 +173,8 @@ export const VocabularyManager = {
   // Get total available words across all levels
   getTotalWords() {
     let total = 0;
-    for (const level in wordsData) {
-      total += wordsData[level].length;
+    for (const level in vocabularyData) {
+      total += vocabularyData[level].length;
     }
     return total;
   },

@@ -254,6 +254,22 @@ function GameMenu({ onSelectGame }) {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      {/* My Vocabulary Button - Now First */}
+      <button
+        onClick={() => onSelectGame('vocabulary')}
+        className="p-6 sm:p-8 rounded-2xl shadow-lg bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-indigo-700 dark:to-purple-700 text-white hover:shadow-2xl hover:scale-105 transition-all card-premium border-none animate-fade-in-up group"
+      >
+        <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg transform transition-transform group-hover:scale-110 group-hover:rotate-6">
+          <Award className="w-7 h-7 sm:w-8 sm:h-8 text-indigo-600" />
+        </div>
+        <h3 className="text-lg sm:text-xl font-bold mb-2">My Vocabulary</h3>
+        <p className="text-xs sm:text-sm opacity-90 mb-3">View your discovered words</p>
+        <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white/20 rounded-full">
+          📚 View Collection
+        </span>
+      </button>
+
+      {/* Game Cards */}
       {games.map((game, index) => {
         const Icon = game.icon;
         return (
@@ -266,7 +282,7 @@ function GameMenu({ onSelectGame }) {
                 ? 'card-premium hover:shadow-2xl hover:scale-105 cursor-pointer' 
                 : 'bg-gray-100 dark:bg-dark-200 opacity-60 cursor-not-allowed'
             }`}
-            style={{ animationDelay: `${index * 100}ms` }}
+            style={{ animationDelay: `${(index + 1) * 100}ms` }}
           >
             <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${game.gradient} rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg transform transition-transform group-hover:scale-110 group-hover:rotate-6`}>
               <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
@@ -290,21 +306,6 @@ function GameMenu({ onSelectGame }) {
           </button>
         );
       })}
-      
-      {/* Vocabulary Box Button */}
-      <button
-        onClick={() => onSelectGame('vocabulary')}
-        className="p-6 sm:p-8 rounded-2xl shadow-lg bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-indigo-700 dark:to-purple-700 text-white hover:shadow-2xl hover:scale-105 transition-all card-premium border-none animate-fade-in-up animation-delay-300 group"
-      >
-        <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg transform transition-transform group-hover:scale-110 group-hover:rotate-6">
-          <Award className="w-7 h-7 sm:w-8 sm:h-8 text-indigo-600" />
-        </div>
-        <h3 className="text-lg sm:text-xl font-bold mb-2">My Vocabulary</h3>
-        <p className="text-xs sm:text-sm opacity-90 mb-3">View your discovered words</p>
-        <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white/20 rounded-full">
-          📚 View Collection
-        </span>
-      </button>
     </div>
   );
 }

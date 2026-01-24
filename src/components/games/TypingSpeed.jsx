@@ -126,18 +126,8 @@ export default function TypingSpeed({ level, onBack, onWordDiscovered }) {
       lastAccuracy: accuracy
     });
 
-    // Mark words as discovered
-    const words = paragraph.text.toLowerCase().match(/\b[a-z]+\b/g) || [];
-    const uniqueWords = [...new Set(words)];
-    
-    uniqueWords.forEach(word => {
-      const allWords = VocabularyManager.getWordsByLevel(level);
-      const foundWord = allWords.find(w => w.word.toLowerCase() === word);
-      if (foundWord) {
-        VocabularyManager.markDiscovered(foundWord.id, level);
-      }
-    });
-
+    // Typing speed uses paragraphs, not vocabulary words
+    // No word discovery needed here
     onWordDiscovered();
   };
 

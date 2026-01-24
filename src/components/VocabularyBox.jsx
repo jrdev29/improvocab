@@ -6,18 +6,33 @@ export default function VocabularyBox({ level, onBack }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState('all');
   
-  const allWords = VocabularyManager.getWordsByLevel(level);
-  const discovered = VocabularyManager.getDiscovered(level);
+  // Get words with error handling
+  const allWords = VocabularyManager.getWordsByLevel(level) || [];
+  const discovered = VocabularyManager.getDiscovered(level) || [];
   const discoveredWords = allWords.filter(w => discovered.includes(w.id));
   
-  // Get unique categories
-  const categories = ['all', ...new Set(discoveredWords.map(w => w.category))];
+  // Get unique categories safely
+  const categorySet = new Set();
+  discoveredWords.forEach(word => {
+    if (word && word.category) {
+      categorySet.add(word.category);
+    }
+  });
+  const categories = ['all', ...Array.from(categorySet)];
   
-  // Filter words
+  // Filter words safely
   const filteredWords = discoveredWords.filter(word => {
-    const matchesSearch = word.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          word.definition.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = filterCategory === 'all' || word.category === filterCategory;
+    if (!word) return false;
+    
+    const searchLower = searchTerm.toLowerCase();
+    const matchesSearch = 
+      (word.word && word.word.toLowerCase().includes(searchLower)) ||
+      (word.definition && word.definition.toLowerCase().includes(searchLower));
+    
+    const matchesCategory = 
+      filterCategory === 'all' || 
+      (word.category && word.category === filterCategory);
+    
     return matchesSearch && matchesCategory;
   });
   
@@ -78,9 +93,9 @@ export default function VocabularyBox({ level, onBack }) {
                 onChange={(e) => setFilterCategory(e.target.value)}
                 className="input-premium pl-10 pr-8 appearance-none cursor-pointer"
               >
-                {categories.map(cat => (
+                {categories.map((cat) => (
                   <option key={cat} value={cat}>
-                    {cat === 'all' ? 'All Categories' : cat.key(0).toUpperCase() + cat.slice(1)}
+                    {cat === 'all' ? 'All Categories' : cat.charAt(0).toUpperCase() + cat.slice(1)}
                   </option>
                 ))}
               </select>
@@ -106,25 +121,33 @@ export default function VocabularyBox({ level, onBack }) {
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400">{word.word}</h3>
-                    <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-200 text-gray-600 dark:text-gray-400 rounded-full uppercase">
-                      {word.category}
-                    </span>
+                    <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400">
+                      {word.word || 'Unknown'}
+                    </h3>
+                    {word.category && (
+                      <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-200 text-gray-600 dark:text-gray-400 rounded-full uppercase">
+                        {word.category}
+                      </span>
+                    )}
                   </div>
                   
-                  <p className="text-gray-700 dark:text-gray-300 mb-3">{word.definition}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-3">
+                    {word.definition || 'No definition available'}
+                  </p>
                   
                   {word.example && (
-                    <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-3 border-l-4 border-primary-400 dark:border-primary-600">
+                    <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-3 border-l-4 border-primary-400 dark:border-primary-600 mb-3">
                       <p className="text-sm text-gray-700 dark:text-gray-300 italic">"{word.example}"</p>
                     </div>
                   )}
                   
-                  <div className="mt-3 pt-3 border-t border-gray-200 dark:border-dark-300">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      <strong>Hint:</strong> {word.hint}
-                    </p>
-                  </div>
+                  {word.hint && (
+                    <div className="mt-3 pt-3 border-t border-gray-200 dark:border-dark-300">
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <strong>Hint:</strong> {word.hint}
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
