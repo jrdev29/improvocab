@@ -9,6 +9,10 @@ import WordleGame from './components/games/WordleGame';
 import TypingSpeed from './components/games/TypingSpeed';
 import VocabularyBox from './components/VocabularyBox';
 
+// Import ad components
+import BannerAd from './components/ads/BannerAd';
+import PopunderAd from './components/ads/PopunderAd';
+
 export default function App() {
   const [currentView, setCurrentView] = useState('menu');
   const [selectedLevel, setSelectedLevel] = useState('A1');
@@ -21,6 +25,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-dark-50 dark:via-dark-100 dark:to-dark-200 p-3 sm:p-4 md:p-6 transition-all duration-300">
+      {/* Load Popunder Ad Script */}
+      <PopunderAd />
+      
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <header className="card-premium p-4 sm:p-6 mb-4 sm:mb-6 animate-fade-in-down">
@@ -151,7 +158,11 @@ export default function App() {
         {/* Main Content */}
         <div className="animate-fade-in-up">
           {currentView === 'menu' && (
-            <GameMenu onSelectGame={(game) => setCurrentView(game)} />
+            <>
+              <GameMenu onSelectGame={(game) => setCurrentView(game)} />
+              {/* Banner Ad on Home Screen */}
+              <BannerAd />
+            </>
           )}
           
           {currentView === 'wordGuess' && (
@@ -201,6 +212,15 @@ export default function App() {
 
 // Game Menu Component
 function GameMenu({ onSelectGame }) {
+  const handleGameClick = (gameId, isActive) => {
+    if (!isActive) return;
+    
+    // Trigger the game navigation
+    onSelectGame(gameId);
+    
+    // Popunder will trigger automatically on click (Adsterra handles this)
+  };
+
   const games = [
     { 
       id: 'wordGuess', 
@@ -256,7 +276,7 @@ function GameMenu({ onSelectGame }) {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
       {/* My Vocabulary Button - Now First */}
       <button
-        onClick={() => onSelectGame('vocabulary')}
+        onClick={() => handleGameClick('vocabulary', true)}
         className="p-6 sm:p-8 rounded-2xl shadow-lg bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-indigo-700 dark:to-purple-700 text-white hover:shadow-2xl hover:scale-105 transition-all card-premium border-none animate-fade-in-up group"
       >
         <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg transform transition-transform group-hover:scale-110 group-hover:rotate-6">
@@ -275,7 +295,7 @@ function GameMenu({ onSelectGame }) {
         return (
           <button
             key={game.id}
-            onClick={() => game.status === 'active' && onSelectGame(game.id)}
+            onClick={() => handleGameClick(game.id, game.status === 'active')}
             disabled={game.status === 'coming'}
             className={`relative p-6 sm:p-8 rounded-2xl shadow-lg transition-all animate-fade-in-up group ${
               game.status === 'active' 
