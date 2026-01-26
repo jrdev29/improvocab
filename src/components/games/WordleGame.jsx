@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import VocabularyManager from '../../utils/vocabularyManager';
-
+import BannerAd from '../ads/BannerAd';
 export default function WordleGame({ level, onBack, onWordDiscovered }) {
   const MAX_ATTEMPTS = 6;
   const [currentWord, setCurrentWord] = useState(null);
@@ -123,6 +123,7 @@ export default function WordleGame({ level, onBack, onWordDiscovered }) {
                 'border-gray-300 dark:border-dark-300 bg-white dark:bg-dark-100'
               }`}
             >
+              <BannerAd />
               {letter}
             </div>
           );
