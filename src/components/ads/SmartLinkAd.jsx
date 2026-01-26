@@ -10,7 +10,7 @@ export default function SmartLinkAd() {
       const script = document.createElement('script');
       script.async = true;
       script.setAttribute('data-cfasync', 'false');
-      script.src = '//pl24230375.profitablecpmrate.com/YOUR_SMARTLINK_KEY/invoke.js';
+      script.src = 'https://www.effectivegatecpm.com/ffzn7nw3z?key=91be7b1469a515bd241edf4079c3875d';
       
       document.body.appendChild(script);
       smartLinkLoaded = true;
