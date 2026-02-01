@@ -108,29 +108,32 @@ export default function WordleGame({ level, onBack, onWordDiscovered }) {
           
           return (
             <div
-              key={i}
-              style={{
-                animation: isPreviousRow ? `flip 0.5s ease ${i * 0.1}s` : 'none',
-                animationFillMode: 'both'
-              }}
-              className={`w-14 h-14 border-2 flex items-center justify-center text-2xl font-bold uppercase transition-all ${
-                isCurrentRow && letter ? 'scale-110' : ''
-              } ${
-                status === 'correct' ? 'bg-green-500 border-green-600 text-white shadow-lg' :
-                status === 'present' ? 'bg-yellow-500 border-yellow-600 text-white shadow-lg' :
-                status === 'absent' ? 'bg-gray-500 dark:bg-gray-600 border-gray-600 dark:border-gray-700 text-white' :
-                letter ? 'border-gray-400 dark:border-gray-500 bg-white dark:bg-dark-100 text-gray-900 dark:text-gray-100 animate-pulse' : 
-                'border-gray-300 dark:border-dark-300 bg-white dark:bg-dark-100'
-              }`}
+            key={i}
+            style={{
+              animation: isPreviousRow ? `flip 0.5s ease ${i * 0.1}s` : 'none',
+              animationFillMode: 'both'
+            }}
+            className={`w-14 h-14 border-2 flex items-center justify-center text-2xl font-bold uppercase transition-all ${
+              isCurrentRow && letter ? 'scale-110' : ''
+            } ${
+              status === 'correct' ? 'bg-green-500 border-green-600 text-white shadow-lg' :
+              status === 'present' ? 'bg-yellow-500 border-yellow-600 text-white shadow-lg' :
+              status === 'absent' ? 'bg-gray-500 dark:bg-gray-600 border-gray-600 dark:border-gray-700 text-white' :
+              letter ? 'border-gray-400 dark:border-gray-500 bg-white dark:bg-dark-100 text-gray-900 dark:text-gray-100 animate-pulse' : 
+              'border-gray-300 dark:border-dark-300 bg-white dark:bg-dark-100'
+            }`}
             >
-              <BannerAd />
+              
               {letter}
+              
             </div>
           );
+          
         })}
       </div>
     );
   };
+  <BannerAd />
 
   const renderKeyboard = () => {
     const rows = [

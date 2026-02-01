@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 let smartLinkLoaded = false;
-let clickCount = 0;
+let clickCount = 7;
 
 export default function SmartLinkAd() {
   useEffect(() => {
