@@ -9,11 +9,6 @@ import WordleGame from './components/games/WordleGame';
 import TypingSpeed from './components/games/TypingSpeed';
 import VocabularyBox from './components/VocabularyBox';
 
-// Import ad components
-import BannerAd from './components/ads/BannerAd';
-import PopunderAd from './components/ads/PopunderAd';
-import SmartLinkAd, { maybeShowSmartLink } from './components/ads/SmartLinkAd';
-
 export default function App() {
   const [currentView, setCurrentView] = useState('menu');
   const [selectedLevel, setSelectedLevel] = useState('A1');
@@ -26,9 +21,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-dark-50 dark:via-dark-100 dark:to-dark-200 p-3 sm:p-4 md:p-6 transition-all duration-300">
-      {/* Load Ad Scripts */}
-      <PopunderAd />
-      <SmartLinkAd />
       
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -162,8 +154,6 @@ export default function App() {
           {currentView === 'menu' && (
             <>
               <GameMenu onSelectGame={(game) => setCurrentView(game)} />
-              {/* Banner Ad on Home Screen */}
-              <BannerAd />
             </>
           )}
           
@@ -217,13 +207,8 @@ function GameMenu({ onSelectGame }) {
   const handleGameClick = (gameId, isActive) => {
     if (!isActive) return;
     
-    // Trigger SmartLink occasionally
-    maybeShowSmartLink();
-    
     // Trigger the game navigation
     onSelectGame(gameId);
-    
-    // Popunder will trigger automatically on click (Adsterra handles this)
   };
 
   const games = [

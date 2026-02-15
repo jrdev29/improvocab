@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Timer, Zap, Trophy, RotateCcw, Play } from 'lucide-react';
 import VocabularyManager from '../../utils/vocabularyManager';
-import BannerAd from '../ads/BannerAd';
 
 export default function TypingSpeed({ level, onBack, onWordDiscovered }) {
   const [paragraph, setParagraph] = useState(null);
@@ -173,7 +172,6 @@ export default function TypingSpeed({ level, onBack, onWordDiscovered }) {
             </span>
           );
         })}
-        <BannerAd />
       </div>
     );
   };
